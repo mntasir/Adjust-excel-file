@@ -1,1 +1,14 @@
 # Adjust-excel-file
+import openpyxl
+
+# Open the Excel file
+workbook = openpyxl.load_workbook(r'C:\Users\yourname\Desktop\ACs.xlsx')
+
+# Select the worksheet to work with
+worksheet = workbook['Sheet1']
+
+# Add a value to a cell
+worksheet['A3'] = 'Hello, World!'
+
+# Save the changes
+workbook.save(r'C:\Users\yourname\Desktop\example.xlsx')
